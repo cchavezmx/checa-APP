@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       <span className='canvas' ref={webcamRef}>
        <QrReader
-        delay={500}
+        delay={300}
         onResult={(result, error) => {
           if (!!result) {
             setData(result?.text);            
