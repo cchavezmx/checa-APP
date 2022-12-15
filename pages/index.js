@@ -29,10 +29,10 @@ export default function Home() {
           { data !== 'No result' && <p>Bienvenido: {data}</p>}
         </div>
       <span className='canvas' ref={webcamRef}>
-       <QrReader        
+       <QrReader
+        delay={500}
         onResult={(result, error) => {
           if (!!result) {
-            console.log("🚀 ~ file: index.js:27 ~ Home ~ result", result)
             setData(result?.text);            
             html2canvas(webcamRef.current).then(canvas => {
               const imgData = canvas.toDataURL('image/png');
