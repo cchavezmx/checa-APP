@@ -1,6 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap");
+
 html,
 body {
+  background-color: #1e2140;
   padding: 0;
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -26,42 +30,51 @@ p {
   padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
-
 .App {
   display: grid;
   place-content: center;
   background-color: #1e2140;
-  width: 100vw;
-  height: 100vh;
 }
 
 .qr-panel {
-  width: 700px;
-  height: 700px;
+  width: 600px;
+  height: 100%;
   border-radius: 70px;
 }
 
 .reloj {
   background-color: #151932;
-  border-radius: 900px;
+  border-radius: 20px;
   color: white;
   font-size: 2rem;
   text-align: center;
   margin: 0;
-  padding: 0;
 }
 
 .canvas {
   width: 100px;
   height: 100px;
   border-radius: 70px;
+}
+
+.camera {
+  margin-top: 20px;
+  background-color: #151932;
+  height: fit-content;
+  border-radius: 70px;
+  border: 2px solid white;
+  margin-bottom: 20px;
+  min-height: 600px;
+}
+
+.wellcome_tile {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #4BB543;
+  border-radius: 14px;
+  height: 80px;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+  margin: 0;
 }
